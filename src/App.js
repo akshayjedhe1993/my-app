@@ -2,6 +2,7 @@
 // import './App.css';
 import React from 'react';
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
   // return (
@@ -44,9 +45,14 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseDataHandler = (expense) => {
+    console.log('expense',expense);
+  };
+
   return (
     <div>
-      <h2>Let's get started</h2>
+      <NewExpense onAddExpense={addExpenseDataHandler} />
       <Expenses items={expenses} />
     </div>
   );
