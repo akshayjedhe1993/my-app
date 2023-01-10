@@ -1,8 +1,9 @@
 // import logo from './logo.svg';
 // import './App.css';
-import Expenses from './components/Expenses';
+import React from 'react';
+import Expenses from './components/Expenses/Expenses';
 
-function App() {
+const App = () => {
   // return (
   //   <div className="App">
   //     <header className="App-header">
@@ -49,6 +50,12 @@ function App() {
       <Expenses items={expenses} />
     </div>
   );
+  // return React.createElement(
+  //   'div', 
+  //   {}, 
+  //   React.createElement('h2', {}, 'Let\'s get started'),
+  //   React.createElement(Expenses, {items: expenses})
+  // );
 }
 
 export default App;
